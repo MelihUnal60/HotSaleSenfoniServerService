@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <configSections>
+    <sectionGroup name="applicationSettings"
+      type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="HotSaleSenfoniAppServer.Properties.Settings"
+        type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  <!--
+    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.6.1" />
+      </system.Web>
+  -->
+  <system.web>
+    <compilation debug="true" targetFramework="4.7.1"/>
+    <httpRuntime targetFramework="4.6.1"/>
+  </system.web>
+  <connectionStrings>
+    <!--add name="uyum" connectionString="Data Source=UYUM_TEST;User Id=uyumsoft;Password=uyumsoft" providerName="Oracle.ManagedDataAccess.Client" /-->
+    
+    <!--<add name="uyum" connectionstring="data source=deltalocal;user ıd=uyumsoft;password=uyumsoft" providername="oracle.manageddataaccess.client" />-->
+
+    <!-- delta -->
+    <!-- add name="uyum"
+      connectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.17.37.93)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=UYUMSOFT)));User Id=uyumsoft;Password=uyumsoft;"
+      providerName="Oracle.ManagedDataAccess.Client"/ -->
+
+    <add name="uyum"
+      connectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.71.33)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=UYUMTEST)));User Id=uyumsoft;Password=uyumsoft;"
+      providerName="Oracle.ManagedDataAccess.Client"/>
+    
+
+    <!--<add name="uyum" connectionString="Server=192.168.71.33;User Id=uyum;Password=12345;Database=uyumtestdb;Port=5432;Pooling = false;MinPoolSize = 0;CommandTimeout = 0;Timeout = 600;ConnectionIdleLifetime = 10;KeepAlive = 10;ApplicationName=WebService" providerName="Npgsql"/>-->
+    <!--<add name="uyum" connectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.71.33)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=UYUMPROD)));User Id=uyumsoft;Password=uyumsoft;" providerName="Oracle.ManagedDataAccess.Client" />-->
+    <!--<add name="uyum" connectionString="Server=195.175.49.218;User Id=uyum;Password=12345;Database=uyumsoft;Port=5432;Pooling = false;MinPoolSize = 0;CommandTimeout = 0;Timeout = 600;ConnectionIdleLifetime = 10;KeepAlive = 10;ApplicationName=WebService" providerName="Npgsql"/>-->
+    <!--<add name="uyum" connectionString="Server=195.175.49.218;User Id=uyum;Password=12345;Database=uyumsoft;Port=5432;Pooling = false;MinPoolSize = 0;CommandTimeout = 0;Timeout = 600;ConnectionIdleLifetime = 10;KeepAlive = 10;ApplicationName=WebService" providerName="Npgsql"/>-->
+    <!--<add name="uyum" connectionString="Server=192.168.3.216;User Id=uyum;Password=12345;Database=uyumsoft;Port=5432;Pooling = false;MinPoolSize = 0;CommandTimeout = 0;Timeout = 600;ConnectionIdleLifetime = 10;KeepAlive = 10;ApplicationName=WebService" providerName="Npgsql"/>-->
+    <!--<add name="uyum" connectionString="Server=195.175.49.218;User Id=uyum;Password=12345;Database=uyumsoft;Port=5432;Pooling = false;MinPoolSize = 0;CommandTimeout = 0;Timeout = 600;ConnectionIdleLifetime = 10;KeepAlive = 10;ApplicationName=WebService" providerName="Npgsql"/>-->
+  </connectionStrings>
+  <applicationSettings>
+    <HotSaleSenfoniAppServer.Properties.Settings>
+      <setting name="UyumUrl" serializeAs="String">
+        <!-- delta -->
+        <!-- value>http://10.17.37.74:8090/</value -->
+
+        <!-- value>http://localhost:4444/</value -->
+        <value>http://oratest.ofis.uyumcloud.com/</value>
+        <!-- value>https://erp.delta-group.az:8181/</value -->
+      </setting>
+      <setting name="HotSaleSenfoniAppServer_Senfoni_GeneralSenfoniService"
+        serializeAs="String">
+        <!-- delta -->
+        <!-- value>http://10.17.37.74:8090/WebService/General/GeneralSenfoniService.asmx</value -->
+        <value>http://oratest.ofis.uyumcloud.com/WebService/General/GeneralSenfoniService.asmx</value>
+        <!-- value>http://localhost:4444/WebService/General/GeneralSenfoniService.asmx</value-->
+      </setting>
+    </HotSaleSenfoniAppServer.Properties.Settings>
+  </applicationSettings>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <staticContent>
+      <mimeMap fileExtension=".apk" mimeType="application/vnd.android.package-archive"/>
+    </staticContent>
+  </system.webServer>
+</configuration>

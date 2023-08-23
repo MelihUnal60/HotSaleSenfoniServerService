@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA9F4980-EE63-4BF0-98B0-5DAAC2B00DCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotSaleServiceTables</RootNamespace>
+    <AssemblyName>HotSaleServiceTables</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity.cs" />
+    <Compile Include="ActivityDetail.cs" />
+    <Compile Include="BankAcc.cs" />
+    <Compile Include="BatchProcess.cs" />
+    <Compile Include="BeginOfDay.cs" />
+    <Compile Include="BeginOfDayResult.cs" />
+    <Compile Include="Campaign.cs" />
+    <Compile Include="CampaignExEntity.cs" />
+    <Compile Include="CampaignExItem.cs" />
+    <Compile Include="CampaignInEntity.cs" />
+    <Compile Include="CampaignInItem.cs" />
+    <Compile Include="CampaignResultItem.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Deposit.cs" />
+    <Compile Include="DepositTransaction.cs" />
+    <Compile Include="DueDisc.cs" />
+    <Compile Include="EndOfDay.cs" />
+    <Compile Include="EndOfDayItems.cs" />
+    <Compile Include="EndOfDayResult.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="EntityCard.cs" />
+    <Compile Include="EntityCheckInInfo.cs" />
+    <Compile Include="EntityDiscGroup.cs" />
+    <Compile Include="EntityItem.cs" />
+    <Compile Include="EntityRoute.cs" />
+    <Compile Include="EntityRouteItem.cs" />
+    <Compile Include="IadeNedeni.cs" />
+    <Compile Include="InvoiceD.cs" />
+    <Compile Include="InvoiceM.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemBarcode.cs" />
+    <Compile Include="ItemDiscGroup.cs" />
+    <Compile Include="ItemTax.cs" />
+    <Compile Include="ItemTransaction.cs" />
+    <Compile Include="ItemUnit.cs" />
+    <Compile Include="LoadingCard.cs" />
+    <Compile Include="MsgEx.cs" />
+    <Compile Include="Msg.cs" />
+    <Compile Include="OneToOneD.cs" />
+    <Compile Include="OneToOneM.cs" />
+    <Compile Include="OnlineEntityBalance.cs" />
+    <Compile Include="OnlineEntityExtract.cs" />
+    <Compile Include="OnlineItem.cs" />
+    <Compile Include="OnlineOrderD.cs" />
+    <Compile Include="OrderD.cs" />
+    <Compile Include="OrderInvoiceD.cs" />
+    <Compile Include="OrderInvoiceM.cs" />
+    <Compile Include="OrderM.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="PaymentType.cs" />
+    <Compile Include="PdaUserParams.cs" />
+    <Compile Include="PlusMinus.cs" />
+    <Compile Include="PriceList.cs" />
+    <Compile Include="PrintDesign.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseSales.cs" />
+    <Compile Include="RemainingItemInfo.cs" />
+    <Compile Include="Request\BaglantiTestCls.cs" />
+    <Compile Include="Request\GetBeginOfDayCls.cs" />
+    <Compile Include="Request\GetOnlineEntityBalanceCls.cs" />
+    <Compile Include="Request\GetOnlineEntityExtractCls.cs" />
+    <Compile Include="Request\GetOnlineItemCls.cs" />
+    <Compile Include="Request\GetOnlineOrderDCls.cs" />
+    <Compile Include="Request\GetOnlineOrdersCls.cs" />
+    <Compile Include="Request\GetOnlineOrderWithDetailsCls.cs" />
+    <Compile Include="Request\SaveCashPaymentCls.cs" />
+    <Compile Include="Request\SaveChequePaymentCls.cs" />
+    <Compile Include="Request\SaveCreditCardPaymentCls.cs" />
+    <Compile Include="Request\SaveDraftPaymentCls.cs" />
+    <Compile Include="Request\SaveEndOfDayCls.cs" />
+    <Compile Include="Request\SaveInvoiceCls.cs" />
+    <Compile Include="Request\SaveOnlineOrderCls.cs" />
+    <Compile Include="Request\SaveWaybillCls.cs" />
+    <Compile Include="Route.cs" />
+    <Compile Include="SalesPersonPerformance.cs" />
+    <Compile Include="SelectedParameters.cs" />
+    <Compile Include="SourceApp.cs" />
+    <Compile Include="SurveyAnswer.cs" />
+    <Compile Include="SurveyAnswerD.cs" />
+    <Compile Include="SurveyAnswerM.cs" />
+    <Compile Include="SurveyTemplateAnswer.cs" />
+    <Compile Include="SurveyTemplateD.cs" />
+    <Compile Include="SurveyTemplateM.cs" />
+    <Compile Include="SystemSettings.cs" />
+    <Compile Include="Notify.cs" />
+    <Compile Include="Token.cs" />
+    <Compile Include="VehicleTransferD.cs" />
+    <Compile Include="VehicleTransferM.cs" />
+    <Compile Include="VehicleUnloadD.cs" />
+    <Compile Include="VehicleUnloadM.cs" />
+    <Compile Include="WaybillD.cs" />
+    <Compile Include="SystemLog.cs" />
+    <Compile Include="WaybillM.cs" />
+    <Compile Include="Whouse.cs" />
+    <Compile Include="WhouseType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
